@@ -1,6 +1,8 @@
 import './App.css'
 import NavBar from './Component/NavBar'
 import HomePage from './Pages/HomePage'
+import HomeCard from './Component/HomeCard'
+import JobListings from './Component/JobListings'
 
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
     <>
       <NavBar/>
       <HomePage/>
+      <HomeCard/>
+      <JobListings/>
     </>
   )
 }
