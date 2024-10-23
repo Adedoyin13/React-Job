@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const JobListing = ({job}) => {
+const JobListing = ({ job }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
 
     let description = job.description;
@@ -33,5 +33,5 @@ const JobListing = ({job}) => {
     </div>
  )
 }
-
+ 
 export default JobListing
