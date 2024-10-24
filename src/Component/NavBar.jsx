@@ -25,7 +25,7 @@ const NavBar = () => {
                         <div className='flex space-x-8'>
                         <NavLink to='/' className={linkClass}>Home</NavLink>
                         <NavLink to='/jobs' className={linkClass}>Jobs</NavLink>
-                        <NavLink to='/add-jobs' className={linkClass}>Add Jobs</NavLink>
+                        <NavLink to='/add-job' className={linkClass}>Add Job</NavLink>
                         </div>
                     </div>
             </div>

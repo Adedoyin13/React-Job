@@ -1,19 +1,28 @@
 import React from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { toast } from 'react-toastify'
 
-const JobPage = () => {
+const JobPage = ({deleteJob}) => {
   const { id } = useParams();
   const job = useLoaderData();
+  const navigate = useNavigate()
+
+  const onDeleteClick = (jobId) => {
+    const confirm = window.confirm('You really wanna delete this 🤔?')
+
+    if(!confirm) return;
+
+    deleteJob(jobId);
+
+    navigate('/jobs')
+  }
 
   return (
     <>
       <section>
         <div className="container m-auto p-6">
-          <Link
-            to="/jobs"
-            className="text-indigo-500 hover:text-indigo-600 flex items-center">
+          <Link to="/jobs" className="text-indigo-500 hover:text-indigo-600 flex items-center">
             <FaArrowLeft className="mr-2" /> Back to Job Listings.
           </Link>
         </div>

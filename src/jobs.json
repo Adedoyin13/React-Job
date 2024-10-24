@@ -1,5 +1,5 @@
 {
-  "jobs" :[
+  "jobs": [
     {
       "id": "1",
       "title": "Senior React Developer",
@@ -83,7 +83,34 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "6491",
+      "title": "Front-End Developer",
+      "type": "Full-Time",
+      "location": "Nigeria",
+      "description": "Front-End developer with expertise in reactjs and nextjs",
+      "salary": "$100K - 125K",
+      "company": {
+        "name": "DLT Africa",
+        "description": "Train and hire developers across the globe",
+        "contactEmail": "developer@gmail.com",
+        "contactPhone": "08123456789"
+      }
+    },
+    {
+      "id": "36fe",
+      "title": "Graphics Designer",
+      "type": "Remote",
+      "location": "Nigeria",
+      "description": "Build amazing and up to taste website for use ",
+      "salary": "Under $50K",
+      "company": {
+        "name": "DLT Africa",
+        "description": "Build and train graphics designers to become real world designers",
+        "contactEmail": "graphics@gmail.com",
+        "contactPhone": "08080910750"
+      }
     }
   ]
 }
-

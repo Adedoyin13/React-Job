@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const AddJobPage = () => {
+const AddJobPage = ({addJobSubmit}) => {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('Full-Time');
     const [location, setLocation] = useState('');
@@ -37,7 +37,7 @@ const AddJobPage = () => {
 
         toast.success('Job added successfully');
 
-        return navigate('./jobs');
+        return navigate('/jobs');
     }
 
  return (
@@ -49,11 +49,13 @@ const AddJobPage = () => {
 
             <div className='mb-4'>
               <label htmlFor='type' className='block text-gray-700 font-bold mb-2'>Job Type</label>
-              <select id='type' name='type' className='border rounded w-full py-2 px-3' required value={type} onChange={(e) => setType(e.target.value)}>
+              <select id='type' name='type' className='border rounded w-full py-2 px-3 overflow-hidden' required value={type} onChange={(e) => setType(e.target.value)}>
+                <option disabled>Choose your job type</option>
                 <option value='Full-Time'>Full-Time</option>
                 <option value='Part-Time'>Part-Time</option>
                 <option value='Remote'>Remote</option>
                 <option value='Internship'>Internship</option>
+                <option value="Hybrid">Hybrid</option>
               </select>
             </div>
 
